@@ -224,6 +224,7 @@
     &-autor {
         display: flex;
         align-items: center;
+        min-width: 245px;
 
         .avatar {
             width: 30px;
@@ -239,6 +240,14 @@
         span {
             font-size: 14px;
             font-weight: 500;
+        }
+    }
+
+    &-star {
+        font-size: 12px;
+
+        span {
+            color: $bg_dark-blue;
         }
     }
 }
@@ -267,3 +276,45 @@
 
 
 // __________________________________END_PRODUCTS__________________________________________________________
+
+// __________________________________STERT_PRODUCTS-SLIDER__________________________________________________________
+
+.product-slider {
+    padding: 110px 0 120px;
+
+
+    .slick-dots {
+        margin-top: 50px;
+        text-align: center;
+
+
+        li {
+            display: inline-block;
+            margin-left: 3px;
+            margin-right: 3px;
+
+            &.slick-active {
+                button {
+                    background-color: $green;
+                }
+            }
+
+
+            button {
+                border: none;
+                border-radius: 50%;
+                font-size: 0;
+                background-color: rgb(232, 232, 232);
+                width: 16px;
+                height: 16px;
+                cursor: pointer;
+                outline: none;
+
+            }
+        }
+
+    }
+}
+
+
+// __________________________________END_PRODUCTS-SLIDER__________________________________________________________
