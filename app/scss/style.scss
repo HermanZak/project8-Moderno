@@ -460,3 +460,44 @@
 
 
 // __________________________________END_AUTOR__________________________________________________________
+
+// __________________________________START_TUTORIAL__________________________________________________________
+
+.tutorial {
+    padding: 70px 0 120px;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        max-width: 370px;
+        width: 100%;
+
+    }
+}
+
+.tutorial__item {
+
+    &__img {
+        min-height: 270px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &__name {
+        text-align: center;
+        font-size: 24px;
+        background-color: #f8f8f8;
+        @include f700;
+        padding: 30px 10px;
+        color: $bg_dark-blue;
+    }
+}
+
+
+
+
+// __________________________________END_TUTORIAL__________________________________________________________
