@@ -2,9 +2,14 @@
 @import 'fonts';
 @import 'global';
 
+
 // _________________________________________________________________________________________________
 
 // __________________________________START_HEADER__________________________________________________________
+
+.header {
+    background-color: #fff;
+}
 
 .header__top__inner {
     display: flex;
@@ -36,7 +41,8 @@
     background-color: $green;
 }
 
-.header__btn-registre {
+.header__btn-registre,
+.header__btn-logout {
     background-color: $orange;
     margin-left: 7px;
 }
@@ -65,6 +71,298 @@
         font-size: 14px;
     }
 }
+
+.menu__btn {
+    display: none;
+}
+
+.header__btn-login--off {
+    display: none;
+}
+
+.header__btn-logout {
+    display: none;
+
+    &.header__btn-login--on {
+        display: block;
+    }
+}
+
+.header__box {
+    display: flex;
+    align-items: center;
+}
+
+.header__cricle {
+    &.active {
+        display: block;
+    }
+
+    display: none;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #a0a0a0;
+        font-size: 14px;
+    }
+
+
+
+    span {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        line-height: 18px;
+        text-align: center;
+        right: -7px;
+        top: -7px;
+        font-size: 11px;
+        color: #fff;
+    }
+}
+
+.notification {
+    span {
+        background-color: $yellow;
+    }
+}
+
+.massage {
+    span {
+        background-color: $tomato;
+    }
+}
+
+.basket {
+    span {
+        background-color: $green;
+    }
+}
+
+
+
+.user {
+    margin-left: 28px;
+    margin-right: 15px;
+    padding-right: 22px;
+
+
+    &__inner {
+        align-items: center;
+        display: flex;
+    }
+
+    &__images {
+        border-radius: 50%;
+        width: 34px;
+        height: 34px;
+        overflow: hidden;
+        margin-right: 15px;
+    }
+
+    &__info {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    &__name {
+        color: #222222;
+        @include f500;
+    }
+
+    &__maney {
+        @include f700;
+        color: $green;
+    }
+}
+
+.user__menu {
+    position: absolute;
+    top: 67px;
+    left: 18px;
+    background-color: #fff;
+    width: 158px;
+    height: 0;
+    padding: 0 20px;
+    overflow: hidden;
+    transition: all .3s;
+
+    a {
+        font-size: 12px;
+        margin-bottom: 15px;
+    }
+
+    li {
+        display: block;
+    }
+}
+
+.user__box {
+    position: relative;
+    height: 90px;
+    margin-top: 0;
+    margin-top: 45px;
+
+
+    &:hover {
+
+        .user__menu {
+            height: auto;
+            border: 1px solid rgb(204, 204, 204);
+            padding: 20px;
+        }
+
+    }
+}
+
+.notification__menu,
+.massage__menu {
+    .circle__item {
+        padding: 15px 30px 20px 20px;
+    }
+}
+
+.circle__info-data {
+    font-size: 10px;
+    color: #707070;
+}
+
+
+
+.basket__box,
+.massage__box,
+.notification__box {
+    margin-top: 55px;
+    position: relative;
+    margin-left: 15px;
+    height: 90px;
+
+
+    &:hover {
+        .header__cricle::before {
+            color: $bg_dark-blue;
+        }
+
+        .circle__menu {
+            height: auto;
+            overflow: hidden;
+            border: 1px solid rgb(156, 156, 156);
+
+
+        }
+
+        .circle__item {
+            padding: 23px 23px;
+            border-width: 1px;
+        }
+    }
+}
+
+.circle__menu {
+    position: absolute;
+    height: 0;
+    overflow: hidden;
+    top: 62px;
+    right: 0;
+    width: 270px;
+    background-color: #fff;
+    transition: all .3s;
+    z-index: 1 !important;
+    // border: 1px solid rgb(156, 156, 156);
+}
+
+.header__btn-menu {
+    display: none;
+}
+
+.circle__item {
+    // width: 200px;
+    border-bottom: 0px solid rgb(156, 156, 156);
+    padding: 0 23px;
+    display: flex;
+    align-items: center;
+    line-height: 18px;
+    position: relative;
+    transition: all .5s;
+    border-left-width: 1px;
+    border-right-width: 1px;
+
+    &::before {
+        position: absolute;
+        right: 20px;
+        top: 27px;
+        color: #b0bec5;
+        font-size: 16px;
+    }
+}
+
+.icons-color::before {
+    color: $tomato;
+}
+
+.circle__info {
+    margin-left: 20px;
+
+    &-name {
+        @include f700;
+    }
+
+    &-thema {
+        font-size: 12px;
+        color: $green;
+    }
+
+    &-price {
+        @include f700;
+        color: #000;
+        font-size: 16px;
+    }
+}
+
+.basket__box {
+    margin-right: 15px;
+
+}
+
+.basket__title {
+    display: flex;
+    padding-left: 23px;
+    padding-right: 40px;
+    justify-content: space-between;
+    font-size: 16px;
+    @include f700;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #263238;
+}
+
+.baket__btn {
+    padding: 10px 19px 10px 15px;
+    background-color: $green;
+    color: #fff;
+    @include f700;
+    margin-left: 12px;
+    margin-bottom: 15px;
+}
+
+.baket__btn-checkout {
+    background-color: #e85647;
+    padding: 10px 12px 10px 15px;
+    margin-left: 4px;
+}
+
+
+
+
 
 // __________________________________END_HEADER__________________________________________________________
 
@@ -535,6 +833,8 @@
 
     &-menu {
         max-width: 220px;
+
+
     }
 
     &-title {
@@ -930,6 +1230,8 @@
 }
 
 
+
+
 .product-page__filter {
 
     background-color: #fff;
@@ -1032,6 +1334,9 @@
         &-info {
             min-height: 65px;
             padding: 10px 20px;
+            display: block;
+            display: flex;
+            justify-content: space-between;
         }
 
         &-price {
@@ -1049,8 +1354,8 @@
         }
 
         &-star {
-            margin-left: auto;
-            margin-right: 30px;
+            // margin-left: auto;
+            // margin-right: 30px;
         }
     }
 }
@@ -1150,3 +1455,13 @@
 
 
 // __________________________________END_PRODUCT_PAGE__________________________________________________________
+
+
+
+
+
+
+
+
+
+@import 'media';
