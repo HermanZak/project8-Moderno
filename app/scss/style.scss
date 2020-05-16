@@ -2304,6 +2304,234 @@
 // __________________________________END_SETTINGS__________________________________________________________
 
 
+// __________________________________END_PROFILE__________________________________________________________
+
+.profile {
+    .profile__inner {
+        display: flex;
+    }
+
+    .profile__aside {
+        max-width: 270px;
+
+        .aside__item__view {
+            position: relative;
+            padding: 3px 13px 3px 30px;
+
+            &::before {
+                position: absolute;
+                content: '';
+                width: 9px;
+                height: 9px;
+                border-radius: 50%;
+                top: 10px;
+                left: 13px;
+            }
+        }
+
+        .profile__autor-on {
+            &::before {
+                background-color: $green;
+            }
+
+        }
+
+        .profile__autor-off {
+            &::before {
+                background-color: $tomato;
+            }
+        }
+
+        .footer__social-link {
+            margin-bottom: 24px;
+        }
+
+        .profile__aside-btn {
+            a {
+                width: 100%;
+                background-color: $green;
+                margin-bottom: 17px;
+                padding: 20px 0;
+                text-align: center;
+                color: #fff;
+                font-size: 16px;
+                @include f500;
+            }
+
+            .send-message {
+                position: relative;
+                background-color: #546e7a;
+
+                &::before {
+                    position: absolute;
+                    font-family: 'icomoon';
+                    content: '\f003';
+                    left: 60px;
+                    top: 19px;
+                }
+            }
+        }
+    }
+
+    .profile__content {
+        margin-left: 29px;
+
+        .profile__content__baner {
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #dedede;
+
+            .profile__content__baner-img {
+                width: 830px;
+                height: 336px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+            }
+        }
+
+        .profile__content__rangs__inner {
+            background-color: #fff;
+            margin-top: 40px;
+            border: 1px solid #dedede;
+            display: flex;
+            // align-items: center;
+            height: 80px;
+            text-align: center;
+
+
+            .profile__content-item {
+                width: 25%;
+                padding-top: 17px;
+
+
+                span {
+                    display: block;
+                    color: $bg_dark-blue;
+                    @include f500;
+                }
+
+                &+div {
+                    border-left: 1px solid #dedede;
+                }
+            }
+
+            .profile__content__rangs-autor {
+                .rate-star {
+                    margin-right: 5px;
+                }
+
+                .profile-star {
+                    display: inline-block;
+                    @include f500;
+                }
+            }
+
+            .profile__content__rangs-total {
+                color: #000;
+                @include f500;
+            }
+        }
+    }
+
+    .profile__tabs {
+        margin-top: 20px;
+
+        .tab_content {
+            height: auto;
+        }
+
+        .settings__tabs {
+            .tabs {
+                .tab {
+
+                    font-family: 'Roboto-Regular' !important;
+                    font-size: 16px;
+                    font-weight: 500;
+                    position: relative;
+
+                    &.active {
+                        &::before {
+                            color: $green;
+                        }
+                    }
+
+                    &::before {
+                        position: absolute;
+                        font-size: 14px;
+                        color: #8bc34a;
+                        font-family: 'icomoon';
+                        left: 25px;
+                        top: 15px;
+                        color: #d0d0d0;
+                    }
+                }
+            }
+        }
+
+        .tab-item {
+
+            .page__box {
+                padding: 30px 50px 30px 40px;
+
+                .page__box-title {
+                    padding-left: 0px;
+                    border-bottom: none;
+                    font-size: 20px;
+                }
+            }
+
+        }
+    }
+}
+
+
+
+.personal__box__items {
+    margin-top: 40px;
+}
+
+.personal__box__item-head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.personal__box__item-name {
+    @include f500;
+    font-size: 16px;
+    color: $bg_dark-blue;
+    font-style: italic;
+}
+
+.personal__box__item-number {
+    @include f700;
+    font-size: 16px;
+    color: $bg_dark-blue;
+}
+
+.personal__box__item-line {
+    height: 15px;
+    background-color: #f4f4f4;
+    border-radius: 3px;
+    margin-bottom: 23px;
+
+    span {
+        display: block;
+        height: 15px;
+        border-radius: 3px;
+        background-color: $green;
+        background-image: url(../images/profile/pro-bar.png);
+        background-repeat: repeat;
+    }
+}
+
+
+
+
+// __________________________________END_PROFILE__________________________________________________________
+
+
 
 
 
