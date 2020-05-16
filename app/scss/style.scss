@@ -2181,6 +2181,129 @@
 // __________________________________END_CONTACT__________________________________________________________
 
 
+// __________________________________START_SETTINGS__________________________________________________________
+
+.settings {
+    margin-bottom: 100px;
+
+    &__tabs {
+        display: flex;
+    }
+
+    .tabs {
+        min-width: 270px;
+        background-color: #fff;
+        display: block;
+        border: 1px solid #dedede;
+        border-bottom: none;
+        height: 100%;
+
+        .tab {
+            padding: 15px 20px 15px 50px;
+            border-bottom: 1px solid #dedede;
+            cursor: pointer;
+
+
+            &::before {
+                left: 24px;
+                color: #444444;
+            }
+
+        }
+
+        .active {
+            border-bottom: 2px solid $green;
+            color: #37474f;
+            @include f500;
+
+            &::before {
+                color: $green;
+            }
+        }
+
+        span {
+            display: block;
+        }
+    }
+
+    .tab-item {
+        display: none;
+
+        &:first-child {
+            display: block;
+        }
+    }
+
+
+    .tab_content {
+        background-color: #fff;
+        width: 100%;
+        margin-left: 30px;
+        border: 1px solid #dedede;
+        height: 777px;
+
+        .tab-item {
+            .page__box {
+                .page__box-title {
+                    font-size: 24px;
+                    color: $bg_dark-blue;
+                    @include f500;
+                    padding: 18px 33px;
+                    border-bottom: 1px solid #dedede;
+                }
+
+                .page__box-content {
+                    padding: 35px 35px 80px 35px;
+
+                    .page__box-line {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 20px;
+                        align-items: center;
+
+                        label {
+                            color: #444444;
+                            @include f500;
+                        }
+
+                        input {
+                            padding: 0 17px;
+                            height: 40px;
+                            width: 540px;
+                            border: 1px solid #dedede;
+                            background-color: #f9f9f9;
+                        }
+
+                        select {
+                            padding: 0 17px;
+                            height: 40px;
+                            width: 540px;
+                            border: 1px solid #dedede;
+                            background-color: #f9f9f9;
+                            color: inherit;
+                        }
+                    }
+
+                    button {
+                        font-size: 16px;
+                        color: #fff;
+                        border: none;
+                        @include f700;
+                        background-color: $green;
+                        padding: 16px 33px;
+                        margin-top: 5px;
+                        margin-left: 256px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// __________________________________END_SETTINGS__________________________________________________________
+
+
 
 
 
