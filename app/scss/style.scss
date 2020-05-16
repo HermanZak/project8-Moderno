@@ -2532,6 +2532,191 @@
 // __________________________________END_PROFILE__________________________________________________________
 
 
+// __________________________________START_UPLOAD__________________________________________________________
+
+
+.upload {
+    margin-bottom: 100px;
+}
+
+.upload__inner {
+    background-color: #fff;
+    padding: 20px 50px 60px 0;
+
+}
+
+.upload__inner-title {
+    padding-left: 35px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dedede;
+    font-size: 24px;
+    color: $bg_dark-blue;
+    margin-bottom: 40px;
+    @include f500;
+}
+
+.upload__inner-title-dowm {
+    margin-top: 60px;
+}
+
+.upload__inner-content {
+    margin-left: 44px;
+
+    button {
+        font-size: 16px;
+        color: #fff;
+        border: none;
+        @include f700;
+        background-color: $green;
+        padding: 16px 33px;
+        margin-top: 20px;
+        margin-left: 168px;
+        cursor: pointer;
+    }
+}
+
+.upload-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    label {
+        width: 200px;
+
+        span {
+            color: $green;
+        }
+    }
+
+    input,
+    select {
+        height: 40px;
+        background-color: #f9f9f9;
+        border: 1px solid #dcdcdc;
+        width: 100%;
+        padding: 0 17px;
+        color: $text;
+    }
+
+    textarea {
+        background-color: #f9f9f9;
+        resize: none;
+        border: 1px solid #dcdcdc;
+        width: 100%;
+        padding: 0 17px;
+        color: $text;
+        height: 150px;
+        padding-top: 10px;
+
+        &::placeholder {
+            display: flex;
+            align-items: center;
+
+        }
+
+    }
+
+    .jq-selectbox {
+        width: 100%;
+
+        li {
+            width: 100%;
+        }
+    }
+
+    .jq-file {
+        width: 100%;
+        border-radius: 0px;
+        box-shadow: none;
+        background-color: #f9f9f9;
+    }
+
+    .jq-file__name {
+        box-sizing: border-box;
+        width: 100%;
+        height: 40px;
+        padding: 0 17px;
+        line-height: 40px;
+        border: 1px solid #dcdcdc;
+        border-bottom-color: #dcdcdc;
+        border-radius: 4px;
+        background: transparent;
+        box-shadow: none;
+        color: $text;
+        padding-left: 120px;
+    }
+
+    .jq-file__browse {
+        position: absolute;
+        top: 7px;
+        right: auto;
+        left: 8px;
+        line-height: 24px;
+        padding: 0 13px;
+        border: 1px solid #dcdcdc;
+        border-left: 1px solid #dcdcdc;
+        border-radius: 0;
+        background: #fff;
+        box-shadow: none;
+        text-shadow: none;
+
+
+    }
+
+    .jq-selectbox__select {
+        height: 40px;
+        min-width: 100%;
+        padding: 0 17px;
+        border: 1px solid #dcdcdc;
+        border-bottom-color: #dcdcdc;
+        border-radius: 0;
+        background: #f9f9f9;
+        box-shadow: none;
+        font-family: 'Roboto-Regular', sans-serif;
+        color: $text;
+        text-shadow: none;
+        line-height: 40px;
+    }
+
+    .jq-selectbox__dropdown {
+        li {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    .jq-selectbox__trigger-arrow {
+        position: absolute;
+        top: 0px;
+        right: 20px;
+        line-height: 40px;
+        font-size: 15px;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+
+        &::before {
+            content: '\f0d7';
+            font-family: 'icomoon';
+
+        }
+
+    }
+
+    .jq-selectbox__trigger {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 34px;
+        height: 100%;
+        border-left: none;
+    }
+}
+
+// __________________________________END_UPLOAD__________________________________________________________
+
+
 
 
 
