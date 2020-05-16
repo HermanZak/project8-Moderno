@@ -2029,7 +2029,8 @@
 
 // __________________________________START_ABOUT__________________________________________________________
 
-.page-about__top-title {
+.page-about__top-title,
+.contact__top-title {
     border: 1px solid #dedede;
     padding: 22px 25px;
     font-size: 24px;
@@ -2038,7 +2039,8 @@
     @include f500;
 }
 
-.page-about__inner {
+.page-about__inner,
+.contact__inner {
     color: #fffefe;
     border: 1px solid #dedede;
     border-top: none;
@@ -2070,6 +2072,113 @@
 }
 
 // __________________________________END_PAGE-ABOUT__________________________________________________________
+
+// __________________________________START_CONTACT__________________________________________________________
+
+.contact {
+    .contact__inner {
+        padding: 30px 25px 0 25px;
+
+
+        .contact__map {
+            iframe {
+                width: 100%;
+                height: 415px;
+            }
+        }
+
+        .contact__box {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 55px;
+
+
+            .contact__info {
+                width: 240px;
+                padding-left: 40px;
+
+                .contact__info__item {
+
+
+                    .footer__col-title {
+                        color: $bg_dark-blue;
+                        padding-bottom: 20px;
+                        margin-bottom: 20px;
+                        @include f700;
+
+                    }
+
+                    .icon-envelope-o,
+                    .icon-phone,
+                    .icon-map-marker {
+                        position: relative;
+
+                        &::before {
+                            position: absolute;
+                            color: $green;
+                            left: -40px;
+                            top: 4px;
+                        }
+                    }
+
+
+
+                    .contact__info-text {
+                        color: $text;
+                        margin-bottom: 20px;
+                    }
+                }
+
+            }
+
+            .contact__form {
+                width: 730px;
+
+                .contact__form-title {
+                    color: $bg_dark-blue;
+                    font-size: 22px;
+                    @include f700;
+                    margin-bottom: 20px;
+                }
+
+                input {
+                    padding: 13px 17px;
+                    border: none;
+                    background-color: #f1f4f5;
+                    width: 47.6%;
+                    margin-bottom: 30px;
+
+                    &+input {
+                        margin-left: 30px;
+                    }
+                }
+
+                textarea {
+                    display: block;
+                    border: none;
+                    background-color: #f1f4f5;
+                    padding: 13px 17px;
+                    min-height: 190px;
+                    min-width: 100%;
+                    resize: none;
+                }
+
+                button {
+                    font-size: 16px;
+                    color: #fff;
+                    border: none;
+                    @include f700;
+                    background-color: $green;
+                    padding: 16px 33px;
+                    margin-top: 22px;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}
+
+// __________________________________END_CONTACT__________________________________________________________
 
 
 
