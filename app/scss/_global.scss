@@ -12,6 +12,8 @@ html,
 body {
     height: 100%;
     background-color: #f4f6f5;
+    position: relative;
+    overflow-x: hidden;
 }
 
 a {

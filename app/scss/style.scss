@@ -565,6 +565,12 @@
     background-color: $bg_grey;
 }
 
+.products__wrapper,
+.product-slider__wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
 .products__inner-btn {
     text-align: center;
     margin-bottom: 60px;
@@ -590,13 +596,20 @@
 
 .products__inner-box {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    margin-left: -30px;
     flex-wrap: wrap;
+}
+
+.products .product__item {
+    flex-basis: calc(25% - 30px);
+    margin-left: 30px;
 }
 
 .product__item {
     max-width: 442px;
     width: 100%;
+
     box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
     margin-bottom: 30px;
 
@@ -1352,7 +1365,6 @@
     border: 1px solid #dedede;
     padding: 0px 20px;
     margin-bottom: 30px;
-    // margin-right: 30px;
     height: 60px;
     display: flex;
     justify-content: space-between;
@@ -1426,10 +1438,12 @@
 
 .product-page__content {
     width: 100%;
+    margin-left: 30px;
 
     .product__item {
         background-color: #fff;
-        max-width: 270px;
+        flex-basis: calc(33.3333% - 30px);
+        margin-left: 30px;
         box-shadow: 0px 16px 20px 0px rgba(216, 216, 216, 0.75);
         transition: all .5s;
 
@@ -1476,9 +1490,11 @@
 
 .product-page__items {
     display: flex;
-    justify-content: space-between;
+    margin-left: -30px;
+    justify-content: flex-start;
     flex-wrap: wrap;
     margin-bottom: 30px;
+
 }
 
 .pagination {
@@ -1520,8 +1536,10 @@
 }
 
 .product__item {
+
     &.list {
         max-width: 100%;
+        flex-basis: 100%;
 
         .product__item {
             &-img {
@@ -1591,7 +1609,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 16px 0;
+    padding: 16px;
 }
 
 .product-one__img {
@@ -1814,12 +1832,77 @@
     .aside__item__price-box {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         padding-top: 30px;
         padding-bottom: 30px;
 
         .aside__item__price {
             color: $orange;
             font-size: 22px;
+        }
+
+        select {
+            padding: 0 17px;
+            height: 40px;
+            width: 100%;
+            border: 1px solid #dedede;
+            background-color: #f9f9f9;
+            color: inherit;
+        }
+
+
+
+
+
+        .jq-selectbox {
+            width: 100%;
+
+            li {
+                width: 100%;
+            }
+        }
+
+
+        .jq-selectbox__select {
+            height: 40px;
+            min-width: 100%;
+            padding: 0 25px 0 15px;
+            border: 1px solid #dcdcdc;
+            border-bottom-color: #dcdcdc;
+            border-radius: 0;
+            background: #f9f9f9;
+            box-shadow: none;
+            font-family: 'Roboto-Regular', sans-serif;
+            color: $text;
+            text-shadow: none;
+            line-height: 40px;
+        }
+
+        .jq-selectbox__dropdown {
+            li {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        .jq-selectbox__trigger {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 34px;
+            height: 100%;
+            border-left: none;
+        }
+
+        .jq-selectbox__trigger-arrow {
+            position: absolute;
+            top: 18px;
+            right: 12px;
+            width: 0;
+            height: 0;
+            border-top: 5px solid #999;
+            border-right: 5px solid transparent;
+            border-left: 5px solid transparent;
         }
     }
 
@@ -2264,12 +2347,13 @@
                         label {
                             color: #444444;
                             @include f500;
+                            width: 255px;
                         }
 
                         input {
                             padding: 0 17px;
                             height: 40px;
-                            width: 540px;
+                            width: 100%;
                             border: 1px solid #dedede;
                             background-color: #f9f9f9;
                         }
@@ -2277,10 +2361,54 @@
                         select {
                             padding: 0 17px;
                             height: 40px;
-                            width: 540px;
+                            width: 100%;
                             border: 1px solid #dedede;
                             background-color: #f9f9f9;
                             color: inherit;
+                        }
+
+
+
+
+
+                        .jq-selectbox {
+                            width: 100%;
+
+                            li {
+                                width: 100%;
+                            }
+                        }
+
+
+                        .jq-selectbox__select {
+                            height: 40px;
+                            min-width: 100%;
+                            padding: 0 17px;
+                            border: 1px solid #dcdcdc;
+                            border-bottom-color: #dcdcdc;
+                            border-radius: 0;
+                            background: #f9f9f9;
+                            box-shadow: none;
+                            font-family: 'Roboto-Regular', sans-serif;
+                            color: $text;
+                            text-shadow: none;
+                            line-height: 40px;
+                        }
+
+                        .jq-selectbox__dropdown {
+                            li {
+                                display: block;
+                                width: 100%;
+                            }
+                        }
+
+                        .jq-selectbox__trigger {
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            width: 34px;
+                            height: 100%;
+                            border-left: none;
                         }
                     }
 
@@ -2292,7 +2420,7 @@
                         background-color: $green;
                         padding: 16px 33px;
                         margin-top: 5px;
-                        margin-left: 256px;
+                        margin-left: 24%;
                         cursor: pointer;
                     }
                 }
@@ -2715,6 +2843,173 @@
 }
 
 // __________________________________END_UPLOAD__________________________________________________________
+
+
+// __________________________________START_WITHDRAWALS__________________________________________________________
+
+.withdrawals {
+    margin-bottom: 100px;
+
+    .withdrawals__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .withdrawals__title {
+        font-size: 24px;
+        @include f500;
+        color: $bg_dark-blue;
+        border-bottom: 1px solid #dcdcdc;
+        padding-top: 20px;
+        padding-bottom: 24px;
+        padding-left: 30px;
+    }
+
+
+
+    .withdrawals__col {
+        width: 570px;
+        background-color: #fff;
+        height: 100%;
+        // padding: 10px 40px 0 35px;
+    }
+
+    .withdrawals__content {
+        padding-left: 40px;
+        padding-right: 40px;
+        height: auto;
+    }
+
+    .withdrawals__form-line {
+        margin-bottom: 10px;
+
+        label {
+            font-size: 16px;
+            color: $bg_dark-blue;
+            @include f500;
+            line-height: 60px;
+
+            span {
+                color: $green;
+            }
+        }
+
+        input,
+        select {
+            height: 40px;
+            background-color: #f9f9f9;
+            border: 1px solid #dcdcdc;
+            width: 100%;
+            padding: 0 17px;
+            color: $text;
+        }
+    }
+
+
+    .jq-selectbox {
+        width: 100%;
+
+        li {
+            width: 100%;
+        }
+    }
+
+
+    .jq-selectbox__select {
+        height: 40px;
+        min-width: 100%;
+        padding: 0 17px;
+        border: 1px solid #dcdcdc;
+        border-bottom-color: #dcdcdc;
+        border-radius: 0;
+        background: #f9f9f9;
+        box-shadow: none;
+        font-family: 'Roboto-Regular', sans-serif;
+        color: $text;
+        text-shadow: none;
+        line-height: 40px;
+    }
+
+    .jq-selectbox__dropdown {
+        li {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    .jq-selectbox__trigger {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 34px;
+        height: 100%;
+        border-left: none;
+    }
+
+    button {
+        font-size: 16px;
+        color: #fff;
+        border: none;
+        @include f700;
+        background-color: $green;
+        padding: 16px 33px;
+        margin-top: 40px;
+        margin-bottom: 50px;
+        cursor: pointer;
+    }
+
+
+
+    .withdrawals__conent-item {
+        display: flex;
+        height: 40px;
+        align-items: center;
+
+        padding: 0 20px;
+        margin-bottom: 10px;
+        color: #444444;
+        @include f500;
+        font-size: 13px;
+
+        &:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+
+        &:first-child {
+            margin-top: 30px;
+        }
+
+        &:last-child {
+            margin-bottom: 40px;
+        }
+    }
+
+    .withdrawals__conent-data {
+        width: 154px;
+        padding-left: 20px;
+    }
+
+    .withdrawals__conent-email {
+        width: 180px;
+    }
+
+    .withdrawals__conent-price {
+        @include f700;
+        width: 75px;
+    }
+
+    .withdrawals__conent-status {
+        width: 83px;
+        @include f700;
+
+        &.withdrawals__conent-paid {
+            color: $green;
+        }
+    }
+
+}
+
+// __________________________________END_WITHDRAWALS__________________________________________________________
 
 
 
